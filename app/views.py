@@ -27,10 +27,29 @@ def error_handle(error):
 	}
 	try:
 		print "Connecting"
+
 		links2 = duckduckgo.search(str(error),max_results=100)
 		links2 = list(set(links2))
 		print links2
 		stackoverflow = []
+	#	conn = httplib.HTTPSConnection('westus.api.cognitive.microsoft.com')
+	#	conn.request("POST", "/text/analytics/v2.0/keyPhrases?%s" % params, str(body), headers)
+	#	response = conn.getresponse()
+	#	data = response.read()
+	#	print "DONE"
+	#	print data
+	#	result_dict = json.loads(data)
+	#	key_phrase = str(result_dict['documents'][0]['keyPhrases'])
+	#	links = duckduckgo.search(key_phrase,max_results=100)
+
+		links2 = duckduckgo.search(str(error),max_results=100)
+		links2 = list(set(links2))
+		print links2
+		stackoverflow = []
+
+	#	for link in links:
+	#		if 'stackoverflow.com' in link:
+	#			stackoverflow.append(link)
 
 		for link in links2:
 			if 'stackoverflow.com' in link:
@@ -77,7 +96,10 @@ def error_post():
 		links2 = list(set(links2))
 		#links = list(set(links))
 		#print links
+
 		print links2
+
+
 		print links2
 		stackoverflow = []
 
@@ -101,4 +123,3 @@ def error_post():
 	except Exception as e:
 		return str(e)
 
-	
