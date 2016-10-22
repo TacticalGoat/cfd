@@ -80,6 +80,7 @@ def error_post():
 	}
 	params = urllib.urlencode({})
 	body = str(request.form['body'])
+	print body
 	data = None
 	try:
 		#print "Connecting"
@@ -97,10 +98,10 @@ def error_post():
 		#links = list(set(links))
 		#print links
 
-		print links2
+		#print links2
 
 
-		print links2
+		#print links2
 		stackoverflow = []
 
 		for link in links2:
@@ -112,7 +113,7 @@ def error_post():
 			q_list = q.split('/')
 			if len(q_list) > 4:
 				sqids.append(q_list[4])
-		print sqids
+		#print sqids
 		answers = ""
 		for qid in sqids:
 			answer = get_answers(qid)
