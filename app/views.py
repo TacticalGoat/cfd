@@ -66,7 +66,7 @@ def error_handle(error):
 			answer = get_answers(qid)
 			if answer is not None:
 				answers += answer
-		return answers
+		return json.dumps({'text':answers})
 	except Exception as e:
 		traceback.print_exc()
 		return str(e)
@@ -118,8 +118,7 @@ def error_post():
 			answer = get_answers(qid)
 			if answer is not None:
 				answers += answer
-		return answers
-		return 'success'
+		return json.dumps({'text':answers})
 	except Exception as e:
 		return str(e)
 
