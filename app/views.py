@@ -92,7 +92,7 @@ def error_post():
 		#result_dict = json.loads(data)
 		#key_phrase = str(result_dict['documents'][0]['keyPhrases'])
 		#links = duckduckgo.search(key_phrase,max_results=100)
-		links2 = duckduckgo.search(str(error),max_results=100)
+		links2 = duckduckgo.search(str(body),max_results=100)
 		links2 = list(set(links2))
 		#links = list(set(links))
 		#print links
