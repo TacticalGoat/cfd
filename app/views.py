@@ -79,8 +79,8 @@ def error_post():
 		'Accept':'application/json'
 	}
 	params = urllib.urlencode({})
-	body = str(request.form['body'])
-	print body
+	body = request.form['body']['documents'][0]['text']
+	print 'BODY\n'+body
 	data = None
 	try:
 		#print "Connecting"
