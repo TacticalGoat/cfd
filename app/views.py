@@ -79,7 +79,7 @@ def error_post():
 		'Accept':'application/json'
 	}
 	params = urllib.urlencode({})
-	request_json = json.loads(request.form['body'])
+	request_json = json.loads(str(request.form['body']))
 	body = request_json['documents'][0]['text']
 	print 'BODY\n'+body
 	data = None
