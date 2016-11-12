@@ -4,6 +4,8 @@ Flask-SQLAlchemy==2.1
 itsdangerous==0.24
 Jinja2==2.8
 MarkupSafe==0.23
-pkg-resources==0.0.0
+# pkg-resources==0.0.0 # No such package exists apparently...
 SQLAlchemy==1.1.2
 Werkzeug==0.11.11
+lxml==3.6.4
+py-stackexchange==2.2.6
